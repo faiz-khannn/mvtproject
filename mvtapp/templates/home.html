@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVT Project</title>
+    <link rel="stylesheet" href="../static/home.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="home" class="active">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="data">Read</a></li>
+          <li><a href="insert">Insert</a></li>
+          <li style="float: right">
+            <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <h1 class="a">Media View and Template</h1>
+    <h5 class="b">Web-Application</h5>
+    <p class="c">
+      This is a Django based web-application that performs Create, Read, Update
+      and Delete on a SQL-Server database. You can input data through insert tab
+      and can view by going onto read tab, simultaneously you can update and
+      delete the data by clicking onto the delete/update button.
+    </p>
+  </body>
+</html>

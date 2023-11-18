@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/insert.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="home">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="data">Read</a></li>
+          <li><a href="insert" class="active">Insert</a></li>
+          <li style="float: right">
+            <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <br />
+    <div class="abc">
+      <form action="/insert" method="POST" class="z">
+        empId<input type="number" name="ID" /><br />
+        empName<input type="text" name="Name" /><br />
+        Branch<input type="number" name="Branch" /><br />
+        empdob<input type="date" name="DOB" /><br />
+        contactno<input type="number" name="contactNo" /><br />
+        address<input type="text" name="address" /><br />
+        <input type="submit" />
+      </form>
+    </div>
+  </body>
+</html>

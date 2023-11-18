@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVT Project</title>
+    <link rel="stylesheet" href="../static/about.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="home">Home</a></li>
+          <li><a href="about" class="active">About</a></li>
+          <li><a href="data">Read</a></li>
+          <li><a href="insert">Insert</a></li>
+          <li style="float: right">
+            <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <h1>Document</h1>
+    <h3>{{name}}</h3>
+    <p>{{c}}</p>
+  </body>
+</html>

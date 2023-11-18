@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/update.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="home" class="active">Home</a></li>
+          <li><a href="about" class="active">About</a></li>
+          <li><a href="data" class="active">Read</a></li>
+          <li><a href="insert" class="active">Insert</a></li>
+          <li style="float: right">
+            <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <br />
+    <div class="bv">
+      <form action="/update/{{data.empid}}" method="POST" class="kl">
+        empId<input type="number" name="ID" value="{{data.empid}}" /><br />
+        empName<input type="text" name="Name" value="{{data.empname}}" /><br />
+        Branch<input
+          type="number"
+          name="Branch"
+          value="{{data.branch}}"
+        /><br />
+        empdob<input type="date" name="DOB" value="{{data.empdob}}" /><br />
+        contactno<input
+          type="number"
+          name="contactNo"
+          value="{{data.contactno}}"
+        /><br />
+        address<input
+          type="text"
+          name="address"
+          value="{{data.address}}"
+        /><br />
+        <input type="submit" value="UPDATE" />
+      </form>
+    </div>
+  </body>
+</html>

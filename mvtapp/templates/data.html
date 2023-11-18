@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVT Pro</title>
+    <link rel="stylesheet" href="../static/data.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="home">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="data" class="active">Read</a></li>
+          <li><a href="insert">Insert</a></li>
+          <li style="float: right">
+            <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <h1 class="km">Employees Data</h1>
+    <div class="jklm">
+      <table>
+        <thead>
+          <tr>
+            <th>empID</th>
+            <th>empName</th>
+            <th>Branch</th>
+            <th>empDOB</th>
+            <th>ContactNo</th>
+            <th>Address</th>
+            <th>Option</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for e in emp %}
+          <tr>
+            <td>{{e.empid}}</td>
+            <td>{{e.empname}}</td>
+            <td>{{e.branch}}</td>
+            <td>{{e.empdob}}</td>
+            <td>{{e.contactno}}</td>
+            <td>{{e.address}}</td>
+            <td class="vw">
+              <button><a href="/delete/{{e.empid}}">Delete</a></button>
+              <button><a href="/update/{{e.empid}}">Update</a></button>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
